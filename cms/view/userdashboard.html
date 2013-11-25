@@ -1,0 +1,43 @@
+<div class="row cmsheader">
+	<div class="col-md-3 hidden-xs hidden-sm">
+		{{#if user.companylogo}}
+		<img class="companylogo" src="{{user.companylogo}}"/>
+		{{else}}
+	
+
+		{{/if}}
+	</div>
+	<div class="col-md-9 ol-left hidden-xs hidden-sm">
+		<div class="title">Dashboard</div>
+	</div>
+	
+</div>
+
+<div class="row cmsmenu">
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>    
+  </div>
+<div class="hidden-md hidden-lg hidden-sm" style="position:absolute;top:5px;left:5px;font-weight:bold;font-size:16px;">Dashboard</div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">            
+      <li><a href="#!/dashboard/inbox.messages" id="menuinbox">Enquiries<span class="badge"></span></a></li>      
+      <li><a href="##!/user/logout">Logout</a></li>
+     </ul>
+        </div>
+      </nav>
+</div>
+
+<div class="cmscontent">
+<div class="list_address" style="position: relative; width: 100%; float: left; display:none;">      
+    <input type="text" id="list_address" class="var form-control" placeholder="Search by: Address, City, Zip, Neighborhood" autocomplete="off"><a class="iconx" title=""></a>
+  </div>	
+</div>
+

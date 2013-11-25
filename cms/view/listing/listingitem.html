@@ -1,0 +1,32 @@
+	{{#each listing}}
+		<div class="listingitem">
+			{{#if this.photo.0.thumb}}
+			<div style="background-image:url({{this.photo.0.thumb}});background-repeat:no-repeat" class="listingimg"></div>
+			{{else}}
+			<div style="background:url(../system/img/progress.png)" class="listingimg"></div>
+			{{/if}}
+			<div class="listingprice">
+				<button class="btn btn-small" onclick="listing.openchangeprice({{this.id}},'{{this.priceval}}')" ><span class="glyphicon glyphicon-sort"></span><span id="price{{this.id}}">{{this.price}}</span></button>
+			</div>
+			<div id="status{{this.id}}" data-val="{{this.status}}"/>
+			<div class="listingedit"><button onclick="_.redirect('listing/edit/id_{{this.id}}')" class="btn btn-danger"><i class="fa fa-edit white"></i></button></div>
+			<div class="listingclose"><button onclick="listing.lock({{this.id}});" class="btn btn-danger"><i class="fa {{#if this.status}}fa-lock{{else}}fa-unlock{{/if}} white" id="lock{{this.id}}"></i></button></div>
+			<div class="listingaddress">
+				<a href="#!/dashboard/detail/id_{{this.id}}/">{{this.address}}, {{this.city}} {{this.state}} {{this.country}} {{#if this.zipcode}} {{this.zipcode}} {{/if}}</a>
+			</div>		
+			<div class="listingvisit">
+				<span class="fa fa-eye "></span>{{#if this.visited}} {{this.visited}} {{else}} 0 {{/if}}
+			</div>
+			{{#if this.bedroom}} 
+			<div class="listingbed">
+				<div class="bed"> {{this.bedroom}} </div>
+			</div>
+			 {{/if}}
+			{{#if this.bathroom}} 
+			<div class="listingbath	">
+				 <div class="bath"> {{this.bathroom}} </div>
+			</div>
+			 {{/if}}
+
+		</div>
+	{{/each}}

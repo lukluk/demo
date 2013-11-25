@@ -1,0 +1,78 @@
+<form action="listing/editlisting" method="post" class="newlisting">
+<h6>Edit Listing</h6>
+	<div class="row">
+		<div class="col-md-1 col-sm-1 ">
+			<select id="currency" data-val="{{currency}}" class="select-block var">
+			            <option value="USD">USD</option>
+			            <option value="GBP">GBP</option>
+			            <option value="EUR">EUR</option>
+			            <option value="RUB">RUB</option>
+			          </select>
+		</div>
+		<input type="hidden" class="var" id="id" value="{{id}}"/>
+		<div class="col-md-2 col-sm-2">
+			<input type="text" id="price" value="{{price}}" placeholder="price" class="form-control var required number">
+			<i class="fa fa-dollar toright"></i>
+		</div>		
+		<div class="col-md-1 col-sm-1">
+			<input type="text" id="yearbuild" value="{{yearbuild}}" placeholder="year build" class="form-control var number"> <i class="fa fa-calendar toright"></i>
+		</div>		
+
+		<div class="col-md-1 col-sm-1">
+			<input type="text" id="bedroom" value="{{bedroom}}" placeholder="bedroom" class="form-control var number bedbg">
+
+		</div>
+		<div class="col-md-1 col-sm-1">
+			<input type="text" id="bathroom" value="{{bathroom}}" placeholder="bathroom" class="form-control var number bathbg">
+		</div>
+		<div class="col-md-6 col-sm-6">
+			<select id="type" data-val="{{type}}" class="select-block required var">
+			            <option value="" selected="selected">Type</option>
+			            <option value="home" >Home</option>
+			            <option value="apartment">Apartement</option>
+			            <option value="land">Land</option>
+			            <option value="commercial">Commercial</option>
+			          </select>
+
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-sm-4">
+			<input type="text" id="address" value="{{address}}" placeholder="address" class="form-control var required">
+			<i class="fa fa-map-marker toright"></i>
+		</div>		
+		<div class="col-md-2 col-sm-2">
+			<input type="text" id="city" value="{{city}}" placeholder="city" class="form-control var required">
+			<i class="fa fa-building-o toright"></i>
+		</div>		
+		<div class="col-md-2 col-sm-2">
+			<input type="text" id="state" value="{{state}}" placeholder="state" class="form-control var">
+		</div>		
+		<div class="col-md-1 col-sm-1">
+			<input type="text" id="zipcode" value="{{zipcode}}" placeholder="zipcode" class="form-control var number">
+		</div>		
+		<div class="col-md-3 col-sm-3">
+			<select id="country" data-val="{{country}}" class="select-block required var">
+			            <option value="" selected="selected">Select Country</option>
+			       		<option value="ID" >Indonesia</option>
+			       		<option value="UK" >United Kingdom</optiodon>
+			       		<option value="US" >United States</option>
+			          </select>
+
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-md-5 col-xs-0">
+		</div>
+		<div class="col-md-2 col-center"><br/>
+			<input type="submit" class="buttonx blue" style="display:inline;width:200px" value="Next" />
+		</div>
+		<div class="col-md-5 col-xs-0">
+		</div>				
+	</div>
+	
+
+
+</form>

@@ -1,0 +1,54 @@
+<div id="guidemap" class="guide">
+	<div class="topcenter">Tap min 3 points</div>
+	<img src="user/icon/polygon.png" class="center">
+	<img src="user/icon/hand.png"  id="hand">
+
+
+</div>
+<div style="background:#fff;width:100%;height:100%">
+<div style="clear:both"></div>
+
+ <table id ="featuretable" style="display:none">
+     <tbody id="featuretbody"></tbody>
+    </table>
+<div style="width:100%;height:100%">
+		<div class="myloc"><button class="btn btn-primary" id="myloc" style="width: 100%;height: 34px;"><div class="glyphicon glyphicon-screenshot"></div></button></div>
+  <div class="list_address">      
+    <input type="text" id="list_address" class="var" placeholder="Search by: Address, City, Zip, Neighborhood">
+  </div>
+<div style="clear:both"></div>
+<div id="map"> </div>
+</div>
+<script id="infomaptpl" type="text/x-handlebars-template">
+    <div class="mapitem">
+      {{#if photo}}
+      <a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">
+      <img src="{{photo.0.thumb}}" />
+      </a>
+      {{else}}
+      <a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">
+      <div style="background:url(../system/img/progress.png)" class="infolistingimg"></div>
+      </a>
+      {{/if}}     
+      <div class="infolistingprice">
+        {{price}}
+      </div>
+
+      <div class="infolistingaddress">
+        <a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">{{address}}, {{city}} {{state}} {{country}} {{#if zipcode}} {{zipcode}} {{/if}}</a>
+      </div>    
+      <div style="clear:both"></div>
+      {{#if bedroom}} 
+      <div class="infolistingbed">
+        bed {{bedroom}} 
+      </div>
+       {{/if}}
+      {{#if bathroom}} 
+      <div class="infolistingbath ">
+         bath {{bathroom}} 
+      </div>
+       {{/if}}
+
+    </div>
+</script>
+</div>

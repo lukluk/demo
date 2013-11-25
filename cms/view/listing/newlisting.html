@@ -1,0 +1,102 @@
+<form action="dashboard/saveNewListing" method="post" class="newlisting">
+<h6>Add New Listing</h6>
+	<div class="row">
+		<div class="col-md-1 col-sm-1 ">
+			<select id="currency" value="USD" class="select-block var">
+			            <option value="USD">USD</option>
+			            <option value="GBP">GBP</option>
+			            <option value="EUR">EUR</option>
+			            <option value="RUB">RUB</option>
+			          </select>
+		</div>
+		<div class="col-md-2 col-sm-2">
+			<input type="text" id="price" value="" placeholder="price" class="form-control var required number">
+		</div>		
+		<div class="col-md-2 col-sm-2">
+			<input type="text" id="yearbuild" value="" placeholder="year build" class="form-control var number">
+		</div>		
+		<div class="col-md-2 col-sm-2">
+			<input type="text" id="lotsize" value="" placeholder="lotsize" class="form-control var number">
+		</div>		
+
+		<div class="col-md-2 col-sm-2">
+			<select id="bedroom" value="" class="select-block required var">
+			            <option value="" selected="selected">Bedroom</option>
+			            <option value="1" >1+</option>
+			            <option value="2">2+</option>
+			            <option value="3">3+</option>
+			            <option value="4">4+</option>
+			            <option value="5">5+</option>
+			            <option value="6">6+</option>
+			            <option value="7">7+</option>
+			            <option value="8">8+</option>
+			            <option value="9">9+</option>
+			            <option value="10">10+</option>
+			          </select>
+
+		</div>
+		<div class="col-md-2 col-sm-2">
+			<select id="bathroom" value="" class="select-block required var">
+			            <option value="" selected="selected">Bathroom</option>
+			            <option value="1" >1+</option>
+			            <option value="2">2+</option>
+			            <option value="3">3+</option>
+			            <option value="4">4+</option>
+			            <option value="5">5+</option>
+			            <option value="6">6+</option>
+			            <option value="7">7+</option>
+			            <option value="8">8+</option>
+			            <option value="9">9+</option>
+			            <option value="10">10+</option>
+			          </select>
+
+		</div>
+		<div class="col-md-1 col-sm-1">
+			<select id="type" value="" class="select-block required var">
+			            <option value="" selected="selected">Type</option>
+			            <option value="home" >Home</option>
+			            <option value="apartment">Apartement</option>
+			            <option value="land">Land</option>
+			            <option value="commercial">Commercial</option>
+			          </select>
+
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-sm-4">
+			<input type="text" id="address" value="" placeholder="address" class="form-control var required">
+		</div>		
+		<div class="col-md-2 col-sm-2">
+			<input type="text" id="city" value="" placeholder="city" class="form-control var required">
+		</div>		
+		<div class="col-md-2 col-sm-2">
+			<input type="text" id="state" value="" placeholder="state" class="form-control var">
+		</div>		
+		<div class="col-md-1 col-sm-1">
+			<input type="text" id="zipcode" value="" placeholder="zipcode" class="form-control var number">
+		</div>		
+		<div class="col-md-3 col-sm-3">
+			<select id="country" value="" class="select-block required var">
+			            <option value="" selected="selected">Select Country</option>
+			       		<option value="ID" >Indonesia</option>
+			       		<option value="UK" >United Kingdom</option>
+			       		<option value="US" >United State</option>
+			          </select>
+
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-md-5 col-xs-0">
+		</div>
+		<div class="col-md-2 col-center"><br/>
+			<input type="submit" class="buttonx blue" style="display:inline;width:200px" value="Next" />
+		</div>
+		<div class="col-md-5 col-xs-0">
+		</div>				
+	</div>
+	
+
+
+</form>

@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="col-md-2 col-sm-2 hidden-xs ">
+
+	</div>
+	<div class="col-md-8 col-sm-8">
+		<div class="row" style="margin-top:10px;">
+			<div class="inline left buttonx pucat">from : {{msg.from_email}} </div>
+			<div class="inline left buttonx pucat">property : <a href="#!/dashboard/detail/id_{{msg.listingid}}">{{msg.listing.address}} </a></div>
+		</div>
+		{{#each msg.msgs}}
+		<div class="message box msg-{{this.who}}">
+				<div style="font-size:24px">{{this.subject}}</div>
+				<div class="myline">{{#if this.who}}You {{else}}{{this.fromname}}{{/if}}</div>
+				{{this.msg}}
+		</div>
+		{{/each}}
+		<div class="reply box">
+			<form action="dashboard/inbox.send">
+				<input type="hidden" id="fromname" class="var" value="{{user.firstname}} {{user.lastname}}" />
+				<input type="hidden" id="from_email" class="var" value="{{user.email}}" />
+				
+				<input type="hidden" id="userid" class="var" value="{{user.id}}" />
+				<input type="hidden" id="fromid" class="var" value="{{user.id}}" />
+				<input type="hidden" id="listingid" class="var" value="{{msg.listingid}}" />
+				<input type="text" id="subject" class="var" value="{{#if msg.subject}}Re :{{msg.subject}}{{/if}}" placeholder="Subject" /><br/>
+				<textarea class="txt var" id="msg" placeholder="Type your reply"></textarea>
+				<input type="submit" class="buttonx blue rightbottom" value="Send"/>
+			</form>
+		</div>
+
+	</div>
+	<div class="col-md-2 col-sm-2 hidden-xs ">
+		
+	</div>
+
+</div>

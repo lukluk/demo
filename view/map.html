@@ -1,0 +1,160 @@
+<div class="row" style="background:#fff;width:100%;height:100%;">
+<div class="searchpanel col-md-3 visible-md visible-lg">
+      <form id="searchpanel" action="map/search" method="get" >
+        <div class="box">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="country">     
+              <input type="text" id="country" class="var required" placeholder="Country">
+            </div>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="minprice">      
+              <input type="text" id="minprice" class="var" placeholder="No Minprice">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="maxprice">      
+              <input type="text" id="maxprice" class="var" placeholder="No Maxprice">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="bedroom">     
+              <input type="text" class="var" id="bedroom" placeholder="All Bedroom">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="type">      
+              <input type="text" id="type" class="var" placeholder="All Types">
+            </div>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="added more">      
+              <input type="text" class="var" id="added" placeholder="Anytime">
+            </div>            
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="sort more">     
+              <input type="text" class="var" id="sort" placeholder="Most Recent">
+            </div>
+
+          </div>
+        </div>        
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="more newhome">
+              <label class="checkbox" for="newhome">
+                    <input type="checkbox" value="" class="var"  id="newhome" data-toggle="checkbox">
+                      New Homes
+                    </label>
+                  </div>
+            <div class="more locked">
+              <label class="checkbox" for="locked" >
+                    <input type="checkbox" value=""  class="var" id="locked" data-toggle="checkbox">
+                      Under offer or sold STC
+                    </label>
+            </div>
+
+          </div> <!-- end -->
+          </div> 
+          <div class="row">
+            <div class="col-md-8">
+            </div>
+            <div  class="col-md-4">
+              <input type="submit" class="buttonx green" value="Search"/>
+            </div>
+          </div> 
+        </div>
+      </form>  
+</div>        
+<div style="background:#fff;" class="col-md-9 col-sm-12 col-xs-12" id="mappage">
+<div style="clear:both"></div>
+<table id ="featuretable" style="display:none">
+     <tbody id="featuretbody"></tbody>
+    </table>
+<ul class="nav nav-tabs">
+  <li ><a href="#!/listing/listsearch">Grid</a></li>
+  <li class="active"><a href="#">Map</a></li>
+    <li class=""><a href="#">Galery</a></li>
+
+</ul>
+<div style="width:100%;height:100%" id="mapcon">
+	<div class="myloc"><button class="btn btn-primary" id="myloc" style="width: 100%;height: 34px;"><div class="glyphicon glyphicon-screenshot"></div></button></div>
+  <div class="list_address">      
+    <input type="text" id="list_address" class="var" placeholder="Search by: Address, City, Zip, Keyword">
+  </div>
+<div style="clear:both"></div>
+<div id="map"> </div>
+</div>
+<script id="maptpl" type="text/x-handlebars-template">
+		<div class="mapitem">
+			{{#if photo}}
+			<a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">
+			<img src="{{photo.0.thumb}}" />
+			</a>
+			{{else}}
+			<a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">
+			<div style="background:url(../system/img/progress.png)" class="listingimg"></div>
+      </a>
+			{{/if}}			
+			<div class="listingprice">
+				{{price}}
+			</div>
+
+			<div class="listingaddress">
+				<a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">{{address}}, {{city}} {{state}} {{country}} {{#if zipcode}} {{zipcode}} {{/if}}</a>
+			</div>		
+			{{#if bedroom}} 
+			<div class="listingbed">
+				bed {{bedroom}} 
+			</div>
+			 {{/if}}
+			{{#if bathroom}} 
+			<div class="listingbath	">
+				 bath {{bathroom}} 
+			</div>
+			 {{/if}}
+
+		</div>
+</script>
+<script id="infomaptpl" type="text/x-handlebars-template">
+    <div class="mapitem">
+      {{#if photo}}
+      <a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">
+      <img src="{{photo.0.thumb}}" />
+      </a>
+      {{else}}
+      <a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">
+      <div style="background:url(../system/img/progress.png)" class="infolistingimg"></div>
+      </a>
+      {{/if}}     
+      <div class="infolistingprice">
+        {{price}}
+      </div>
+
+      <div class="infolistingaddress">
+        <a href="#!/dashboard/listingdetail/id_{{id}}/{{address}}_{{city}}_{{state}}_{{country}}">{{address}}, {{city}} {{state}} {{country}} {{#if zipcode}} {{zipcode}} {{/if}}</a>
+      </div>    
+      <div style="clear:both"></div>
+      {{#if bedroom}} 
+      <div class="infolistingbed">
+        bed {{bedroom}} 
+      </div>
+       {{/if}}
+      {{#if bathroom}} 
+      <div class="infolistingbath ">
+         bath {{bathroom}} 
+      </div>
+       {{/if}}
+
+    </div>
+</script>
+</div>
+</div>

@@ -1,0 +1,125 @@
+<script id="metainfo" type="text/x-handlebars-template">
+{{#each metainfo}}	
+<div style="clear:both;margin-bottom:20px;">
+	<div class="infotitle">{{this.type}}</div>
+	<div class="metainfoitems">
+			{{#each this.items}}
+				<div class="row infoitem">
+					<div class="col-md-6 col-sm-6 col-xs-6"><a href="#!/dashboard/deleteInfo/id_{{id}}" ><span class="fa fa-trash-o white"></span></a><a href="#!/dashboard/editInfo/id_{{id}}" ><span class="fa fa-edit white"></span></a>&nbsp;&nbsp;&nbsp;{{this.name}}</div>
+					<div class="col-md-6 col-sm-6 col-xs-6">{{this.value}}</div>
+				</div>
+			{{/each}}
+		</ul>
+	</div>
+</div>
+{{/each}}
+</script>
+<div class="row page">
+	<button id="newinfo" class="buttonx" >Add New Property Info</button><a href="#!/dashboard/index" class="buttonx blue" style="width:200px;float:left;margin-top:0px;margin-left:5px;margin-bottom:5px;">Finish</a>	
+	<div class="hr"></div>
+	<div class="metainfocontent">
+
+	</div>
+	<div class="newinfoform">
+		<form action="dashboard/newinfo" method="post" class="dialog">
+			<div class="row">
+				<div class="col-md-6">
+					Type
+				</div>
+				<div class="col-md-6">
+					<select id="type" value="general" class="var">
+					            <option value="General Information">General Information</option>
+					            <option value="Bedrooms">Bedrooms</option>
+					            <option value="Bathrooms">Bathrooms</option>
+					            <option value="Other rooms">Other rooms</option>
+					            <option value="Interior Features">Interior Features</option>
+					            <option value="Building and Construction">Building and Construction</option>
+					            <option value="Exterior and Lot Features">Exterior and Lot Features</option>
+					            <option value="Garage and Parking">Garage and Parking</option>
+					            <option value="Heating and Cooling">Heating and Cooling</option>
+					            <option value="Utilities">Utilities</option>
+					            <option value="Other Property Info">Other Property Info</option>
+					            <option value="Additional Details">Additional Details</option>
+
+ 		            </select>
+
+				</div>				
+			</div>
+			<div class="row" style="margin-bottom:5px;">
+				<div class="col-md-6">
+					Label
+				</div>
+				<div class="col-md-6">
+					<input class="form-control var" type="text" id="label" placeholder="ex. House Size,Lot Size,Construction,Floor..."/>
+				</div>
+
+			</div>	
+
+			<div class="row">
+				<div class="col-md-6">
+					Value
+				</div>
+				<div class="col-md-6">
+					<input class="form-control var" type="text" id="value" placeholder=""/>
+				</div>
+
+			</div>	
+			<div class="row" style="margin-top:5px;">
+				<div class="col-md-12">
+					<center><input class="buttonx" style="width:200px" type="button" onclick="$('.newinfoform form').fadeOut();" value="Close"><input class="buttonx blue" style="width:200px" type="submit" value="Add"></center>
+				</div>
+			</div>					
+		</form>
+	</div>
+</div>
+	<div class="editinfoform">
+		<form action="dashboard/updateinfo" method="post" class="dialog">
+			<div class="row">
+				<div class="col-md-6">
+					Type
+				</div>
+				<div class="col-md-6">
+					<select id="type" value="general" class="var">
+					            <option value="General Information">General Information</option>
+					            <option value="Bedrooms">Bedrooms</option>
+					            <option value="Bathrooms">Bathrooms</option>
+					            <option value="Other rooms">Other rooms</option>
+					            <option value="Interior Features">Interior Features</option>
+					            <option value="Building and Construction">Building and Construction</option>
+					            <option value="Exterior and Lot Features">Exterior and Lot Features</option>
+					            <option value="Garage and Parking">Garage and Parking</option>
+					            <option value="Heating and Cooling">Heating and Cooling</option>
+					            <option value="Utilities">Utilities</option>
+					            <option value="Other Property Info">Other Property Info</option>
+					            <option value="Additional Details">Additional Details</option>
+
+ 		            </select>
+
+				</div>				
+			</div>
+			<div class="row" style="margin-bottom:5px;">
+				<div class="col-md-6">
+					Label
+				</div>
+				<div class="col-md-6">
+					<input class="form-control var" type="text" id="name" placeholder="ex. House Size,Lot Size,Construction,Floor..."/>
+				</div>
+
+			</div>	
+
+			<div class="row">
+				<div class="col-md-6">
+					Value
+				</div>
+				<div class="col-md-6">
+					<input class="form-control var" type="text" id="value" placeholder=""/>
+				</div>
+
+			</div>	
+			<div class="row" style="margin-top:5px;">
+				<div class="col-md-12">
+					<center><input class="buttonx" style="width:200px" type="button" onclick="$('.editinfoform form').fadeOut();" value="Close"><input class="buttonx blue" style="width:200px" type="submit" value="Update"></center>
+				</div>
+			</div>					
+		</form>
+	</div>

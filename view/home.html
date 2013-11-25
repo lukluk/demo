@@ -1,0 +1,181 @@
+<script id="popular" type="text/x-handlebars-template">
+  <h3>
+    <a class="section-header-link" href="/properties">
+      Popular properties
+    </a>
+  </h3>
+  <div class="property-blocks-list">
+  	{{#each listing}}
+    <div class="property-big-block partial">
+      <div class="property-big-block-photo">
+        <a href="#!/listing/detail/id_{{this.id}}/{{this.address}}/{{this.city}}/{{this.state}}/{{this.country}}">
+          <img alt="" src="{{this.photo.0.url}}">
+          <div class="topleft white bgred"><i class="fa fa-eye fa-lg"></i>&nbsp;&nbsp;{{this.visited}}</div>
+          <div class="property-big-block-photo-badges white">
+            <div class="property-big-block-photo-count">
+              <i class="fa fa-camera fa-lg"></i>&nbsp;&nbsp;{{this.photosqty}}
+            </div>
+          </div>
+        </a>
+      </div>
+      <a href="#!/listing/detail/id_{{this.id}}/{{this.address}}/{{this.city}}/{{this.state}}/{{this.country}}" class="property-big-block-address">
+        {{this.address}}
+      </a>
+      <div class="property-big-block-info">
+        {{this.bedroom}} bedroom
+        {{#if this.info.general.lotsize}}
+        <span class="property-big-block-info-splitter">
+          – 
+        </span>
+        <span class="property-big-block-info-area">
+          <strong>
+            {{this.info.general.lotsize}} м
+            <sup>
+              2
+            </sup>
+          </strong>
+        </span>
+        {{/if}}
+      </div>
+      <div class="property-big-block-price-full">
+        {{this.price}} 
+        
+      </div>
+    </div>  
+    {{/each}}
+  </div>
+</script>
+
+<script id="lastadded" type="text/x-handlebars-template">
+  <h3>
+    <a class="section-header-link" href="/properties">
+      Latest added properties
+    </a>
+  </h3>
+  <div class="property-blocks-list">
+  	{{#each listing}}
+    <div class="property-big-block partial">
+      <div class="property-big-block-photo">
+        <a href="#!/listing/detail/id_{{this.id}}/{{this.address}}/{{this.city}}/{{this.state}}/{{this.country}}">
+          <img alt="" src="{{this.photo.0.url}}">          
+
+          <div class="property-big-block-photo-badges white">
+            <div class="property-big-block-photo-count">
+              <i class="fa fa-camera fa-lg"></i>&nbsp;&nbsp;{{this.photosqty}}
+            </div>
+          </div>
+        </a>
+      </div>
+      <a href="#!/listing/detail/id_{{this.id}}/{{this.address}}/{{this.city}}/{{this.state}}/{{this.country}}" class="property-big-block-address">
+        {{this.address}}
+      </a>
+      <div class="property-big-block-info">
+        {{this.bedroom}} bedroom
+        {{#if this.info.general.lotsize}}
+        <span class="property-big-block-info-splitter">
+          – 
+        </span>
+        <span class="property-big-block-info-area">
+          <strong>
+            {{this.info.general.lotsize}} м
+            <sup>
+              2
+            </sup>
+          </strong>
+        </span>
+        {{/if}}
+      </div>
+      <div class="property-big-block-price-full">
+        {{this.price}} 
+        
+      </div>
+    </div>  
+    {{/each}}
+  </div>
+</script>
+
+<div class="homecontent">  
+	<div class="homemenu"	>
+		<h1 class="title">Search Property</h1>
+		<form id="search" action="listing/search" url="/api/search" method="get" target="_blank">
+			<div class="country">			
+				<input type="text" id="country" class="var required" placeholder="Country" value="United State" data-val="US">
+			</div>
+			<div class="minprice">			
+				<input type="text" id="minprice" class="var" placeholder="No Minprice">
+			</div>
+			<div class="maxprice">			
+				<input type="text" id="maxprice" class="var" placeholder="No Maxprice">
+			</div>
+			<div class="type">			
+				<input type="text" id="type" class="var" placeholder="All Types">
+			</div>
+			<div class="bedroom">			
+				<input type="text" class="var" id="bedroom" placeholder="All Bedroom">
+			</div>
+			<br style="clear:both"/>
+			<br/>
+			<span class="more labelx">Added</span>
+			<div class="added more">			
+				<input type="text" class="var" id="added" placeholder="Anytime">
+			</div>
+
+			<span class="more labelx" style="margin-left:10px">Sort by</span>
+			<div class="sort more">			
+				<input type="text" class="var" id="sort" placeholder="Most Recent">
+			</div>
+			<span class="more labelx" style="margin-left:10px">keyword</span>
+			<div class="keyword more">			
+				<input type="text" class="var" id="keyword" placeholder="e.g. 'garden' or 'wood floors'">
+			</div>
+			<br style="clear:both"/>
+
+			<span class="more labelx" >Include</span>
+			<br/>			
+			<div class="more newhome float">
+				<label class="checkbox" for="newhome">
+	            <input type="checkbox" value="" class="var"  id="newhome" data-toggle="checkbox">
+	            	New Homes
+	          	</label>
+          	</div>
+			<div class="more locked float" style="margin-left:10px">
+				<label class="checkbox" for="locked" >
+	            <input type="checkbox" value=""  class="var" id="locked" data-toggle="checkbox">
+	            	Under offer or sold STC
+	          	</label>
+          	</div>
+
+			<input type="button" class="buttonx green" id="moreoption" value="More Options"/>
+		    <input type="submit" class="buttonx red" id="searchbtn" value="Search"/>
+			<div class="currency">			
+				<div class="btn-toolbar">
+	                <div class="btn-group var" id="currency" data-val="USD">
+	                  <a class="btn btn-primary" href="#" data-val="GBP">GBP(&pound;)</a>
+	                  <a class="btn btn-primary active" href="#" data-val="USD">USD($)</i></a>
+	                  <a class="btn btn-primary" href="#" data-val="EUR">EUR(&euro;)</a>
+	                  <a class="btn btn-primary" href="#" data-val="RUB">RUB(py6)</a>
+	                </div>
+              </div> <!-- /toolbar -->			
+          </div>
+
+
+		</div>
+
+	</form>
+
+</div>
+</div>
+<div class="main-content">
+	<section  id="lastproperty">
+	</section>
+
+	<section  class="index-promo">
+		<h2 class="index-promo-title">Title</h2><div class="index-promo-text">Footer</div>		
+	</section>
+	<section  id="popproperty">
+	</section>
+	<section  id="foot">
+		
+	</section>
+
+</div>

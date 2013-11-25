@@ -1,0 +1,163 @@
+<script id="itemtemplate" type="text/x-handlebars-template">
+{{#if listing}}
+  {{#each listing}}
+    <div class="listingitem row">
+      <div class="col-md-2 col-sm-2 col-xs-4">      
+        <div class="imgcon">  
+          <div class="listingphotos">
+            <span class="glyphicon glyphicon-camera"></span>&nbsp;&nbsp;{{photosqty}}
+          </div>
+          
+          {{#if this.photo.0.thumb}}
+          <a href="#!/listing/detail/id_{{this.id}}/{{address}}/{{city}}/{{state}}/{{country}}"><img src="{{this.photo.0.thumb}}" class="listingimg"/></a>
+          {{else}}
+          <a href="#!/listing/detail/id_{{this.id}}/{{address}}/{{city}}/{{state}}/{{country}}"><img src="/system/img/progress.png" class="listingimg"/></a>
+          {{/if}}
+        </div>        
+      </div>
+      
+
+      <div class="col-md-10 col-sm-9 col-xs-8">
+          <div class="listingprice">
+            {{this.price}}
+          </div>
+        <div class="listingaddress">
+          <a href="#!/listing/detail/id_{{this.id}}/{{address}}/{{city}}/{{state}}/{{country}}">{{this.address}}, {{this.city}} {{this.state}} {{this.country}} {{this.zipcode}}</a>
+        </div>    
+
+        {{#if this.visited}} 
+        <div class="visited">
+            <i class="fa fa-eye"/> {{this.visited}} 
+        </div>
+        {{/if}}
+
+        {{#if this.bedroom}} 
+        <div class="listingbed">
+            bed {{this.bedroom}} 
+        </div>
+        {{/if}}
+        {{#if this.bathroom}} 
+        <div class="listingbath ">
+             bath {{this.bathroom}} 
+        </div>
+        {{/if}}
+        {{#if this.info.general.lotsize}} 
+        <div class="lotsize inline">
+             lotsize {this.info.general.lotsize}} M<up>2</up>
+        </div>
+        {{/if}}
+        <br/>
+        {{#if this.user.companylogo}} 
+        <div class="agent hidden-xs hidden-sm">
+             <img src="{{this.user.companylogo}}" height="50px" height="auto" /> 
+        </div>
+        {{/if}}
+      </div>
+      
+
+      
+    </div>
+
+  {{/each}}
+{{else}}
+  {{#if search}}
+    <br/><center>Not found</center>
+  {{/if}}
+{{/if}}
+</script>
+<div class="row">
+<div class="searchpanel col-md-3 visible-md visible-lg">
+      <form id="searchpanel" action="listing/search" method="get" >
+        <div class="box">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="country">     
+              <input type="text" id="country" class="var required" placeholder="Country">
+            </div>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="minprice">      
+              <input type="text" id="minprice" class="var" placeholder="No Minprice">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="maxprice">      
+              <input type="text" id="maxprice" class="var" placeholder="No Maxprice">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="bedroom">     
+              <input type="text" class="var" id="bedroom" placeholder="All Bedroom">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="type">      
+              <input type="text" id="type" class="var" placeholder="All Types">
+            </div>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="added more">      
+              <input type="text" class="var" id="added" placeholder="Anytime">
+            </div>            
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="sort more">     
+              <input type="text" class="var" id="sort" placeholder="Most Recent">
+            </div>
+
+          </div>
+        </div>        
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="more newhome">
+              <label class="checkbox" for="newhome">
+                    <input type="checkbox" value="" class="var"  id="newhome" data-toggle="checkbox">
+                      New Homes
+                    </label>
+                  </div>
+            <div class="more locked">
+              <label class="checkbox" for="locked" >
+                    <input type="checkbox" value=""  class="var" id="locked" data-toggle="checkbox">
+                      Under offer or sold STC
+                    </label>
+            </div>
+
+          </div> <!-- end -->
+          </div> 
+          <div class="row">
+            <div class="col-md-8">
+            </div>
+            <div  class="col-md-4">
+              <input type="submit" class="buttonx green" value="Search"/>
+            </div>
+          </div> 
+        </div>
+      </form>  
+</div>        
+<div class="listingpage col-md-9 col-sm-12 col-xs-12">
+	<div style="clear:both"></div>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Grid</a></li>
+  <li><a href="#!/map/search/recent_search">Map</a></li>
+  <li><a href="#!/galery/search/recent_search">Galery</a></li>
+
+</ul>
+<div style="padding:0px;">
+  <div class="list_address">      
+    <input type="text" id="list_address" class="var" placeholder="Search by: Address, City, Zip, Keyword">
+  </div>
+  <div class="itemlistpan scroll" touchbottom="listing.nextContent">
+    	<div class="itemlist">	  
+    	</div>
+  </div>
+</div>
+</div>
+
+</div>

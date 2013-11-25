@@ -1,0 +1,53 @@
+<div class="phoneMenu">
+	<div class="row1">
+		<div class="nearBy clickable" action="map/app">
+			<i class="fa fa-map-marker white fa-3x"/>
+			<span class="btnLabel">Property Near me</span>
+		</div>
+		<div class="newSearch clickable" action="listing/fn-searchpage">
+			<i class="fa fa-search fa-3x white"/>
+			<span class="btnLabel">Search</span>
+
+		</div>
+	</div>
+	<div class="row2">
+		<div class="newEntry clickable" action="listing/search/createdDate_ASC">
+			<i class="fa fa-lock white fa-2x"/>
+			<span class="btnLabel">Newest</span>			
+		</div>
+		<div class="hot">
+			<i class="fa fa-star-o white fa-2x"/>
+			<span class="btnLabel">Featured</span>						
+		</div>
+		<div class="recentySold">
+			<i class="fa fa-lock white fa-2x"/>
+			<span class="btnLabel">Sold</span>			
+
+		</div>
+		<div class="rent">
+			<i class="fa fa-home white fa-2x"/>
+			<span class="btnLabel">New Home</span>			
+		</div>
+	</div>
+	<div class="recentSearch">
+		<div class="mtitle">Recent Search</div>
+		<div class="recentSearchList"></div>
+	</div>	
+	<div class="account">
+		<div class="mtitle">Accounts</div>
+		<div class="accountMenu">
+			{{#if login}}			
+			<div class="signinLink"><a href="/cms/#!/dashboard/index">My Account<a/></div>
+			{{else}}
+			<div class="signinLink"><a href="/cms/#!/user/register">Signup<a/></div>
+			{{/if}}
+			{{#if login}}			
+			<div class="loginLink"><a href="/cms/#!/user/login">Login<a/></div>
+			{{else}}
+			<div class="loginLink"><a href="/cms/#!/user/logout">Logout<a/></div>
+			{{/if}}
+		</div>
+	</div>
+	
+
+</div>

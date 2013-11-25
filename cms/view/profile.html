@@ -1,0 +1,128 @@
+	<form action="dashboard/addoffice" class="dialog" id="addofficeform">
+		<div class="row">
+			<div class="col-md-6"> 
+				Address
+			</div>
+			<div class="col-md-6"> 
+				<input type="text" class="form-control var"  id="address" value=""/>
+			</div>
+
+		</div>	
+		<div class="row">
+			<div class="col-md-6"> 
+				Phone
+			</div>
+			<div class="col-md-6"> 
+				<input type="text" class="form-control var"  id="phone" value=""/>
+			</div>
+
+		</div>			
+		<div class="row">
+			<div class="col-md-6"> 
+				Email
+			</div>
+			<div class="col-md-6"> 
+				<input type="text" class="form-control var email"  id="email" value=""/>
+			</div>
+
+		</div>		
+		<div class="row">
+			<div class="col-md-6"> 
+				Website
+			</div>
+			<div class="col-md-6"> 
+				<input type="text" class="form-control var"  id="website" value=""/>
+			</div>
+
+		</div>								
+		<div class="row">
+			<div class="col-md-12"> 
+				<input class="btn btn-primary" type="submit" value="Add"/>
+			</div>
+</div>
+	</form>
+	
+<form action="dashboard/updateuser" stay='true'>
+	<div class="row">
+
+		<div class="col-md-12"> 
+			<img src="" id="companylogoimg" />
+	<span class="buttonx blue fileinput-button">
+	        
+	        <span>Upload Logo...</span>
+	        <!-- The file input field used as target for the file upload widget -->
+	        <input id="upcompanylogo" type="file" name="files">
+	        <input id="companylogo" type="hidden" class="var" >
+	    </span>
+	    <div id="progress" class="progress">
+	        <div class="progress-bar progress-bar-success"></div>
+	    </div>
+	    <div  class="files">
+	    	<ul id="files">
+	    	</ul>
+	    </div>			
+		</div>
+
+	</div>		
+		<div class="row">
+			<div class="col-md-2 col-sm-2"> 
+				Email
+			</div>
+			<div class="col-md-9 col-sm-9"> 
+				<input type="text" class="form-control var email"  id="email" value="{{email}}"/>
+			</div>
+
+		</div>		
+
+	<div class="row">
+		<div class="col-md-2 col-sm-2"> 
+			First Name
+		</div>
+		<div class="col-md-9 col-sm-9"> 
+			<input type="text" class="form-control var"  id="firstname" value="{{firstname}}"/>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-md-2 col-sm-2"> 
+			Last name
+		</div>
+		<div class="col-md-9 col-sm-9"> 
+			<input type="text" class="form-control var"  id="lastname" value="{{lastname}}" />
+		</div>
+
+	</div>	
+	<div class="row">
+		<div class="col-md-2 col-sm-2"> 
+			Offices
+		</div>
+		<div class="col-md-9 col-sm-9"> 
+			<input type="button" class="btn btn-primary" id="addoffice"  Value="Add Office Address" />
+			<div class="officeList">
+
+			</div>			
+		</div>
+
+	</div>	
+
+	<div class="row">
+		<div class="col-md-2 col-sm-2"> 
+			Company Name
+		</div>
+		<div class="col-md-9 col-sm-9"> 
+			<input type="text" class="form-control var"  id="companyname" value="{{companyname}}"/>
+		</div>
+
+	</div>	
+
+	<div class="row">
+		<div class="col-md-2 col-sm-2"> 
+
+		</div>
+		<div class="col-md-9 col-sm-9"> 
+			<input type="submit" class="buttonx blue"  Value="Update" id="updatebtn" />
+		</div>
+
+	</div>		
+
+</form>

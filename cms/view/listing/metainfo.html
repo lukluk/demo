@@ -1,0 +1,14 @@
+{{#each metainfo}}  
+<div style="clear:both;margin-bottom:20px;">
+  <div class="infotitle">{{this.type}}</div>
+  <div class="metainfoitems">
+      {{#each this.items}}
+        <div class="row infoitem">
+          <div class="col-md-6 col-sm-6 col-xs-6"><li style="list-style-type: disc;">{{this.name}}</li></div>
+          <div class="col-md-6 col-sm-6 col-xs-6">{{this.value}}</div>
+        </div>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+{{/each}}

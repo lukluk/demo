@@ -1,0 +1,18 @@
+{{#if mapApp}}
+<div class="btn-group" style="width:100%">
+
+  <button type="button" class="btn btn-primary" style="width:100%"  onclick="map.guide();map.mapclear();$('#shape_b').hide();$('#done').show();MapToolbar.initFeature('shape')" id="shape_b" >Search by drawing area</button>
+
+<button type="button" class="btn btn-danger" style="width:100%;display:none"  onclick="MapToolbar.stopEditing();map.findListing();" id="done" >Done</button>
+
+</div>
+{{/if}}
+{{#if alertMe}}
+<div class="btn-group" style="width:100%">
+
+  
+<button type="button" class="btn btn-warning" style="width:100%;"  onclick="" id="alert" >Create property alert</button>  
+
+
+</div>
+{{/if}}

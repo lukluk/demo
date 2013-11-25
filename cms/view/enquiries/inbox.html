@@ -1,0 +1,25 @@
+{{#if inbox}}
+<table class="table table-striped">
+<thead>
+          <tr>
+          	<th>Subject</th>            
+            <th>From</th>
+            <th>Sent</th>         
+            <th>Property</th>              
+          </tr>
+        </thead>
+        <tbody>
+      
+	  {{#each inbox}}
+	  	<tr >	  	
+	  	<td class="read{{this.asread}}"><a href="#!/dashboard/inbox.open/id_{{this.listingid}}">{{this.subject}}</a></td>	  	
+	  	<td class="read{{this.asread}}">{{this.from}}</td>
+	  	<td class="read{{this.asread}}">{{this.sentdate}}</td>
+	  	<td class="read{{this.asread}}"><img src="{{this.listing.photo.thumb}}" width="50px" height="auto"/><br/>{{this.listing.address}} {{this.listing.city}} {{this.listing.state}} {{this.listing.country}}</td>	  	
+	  	</tr>
+	  {{/each}}
+  		</tbody>
+</table>
+	  {{else}}
+	  <center><br/><br/><br/>No Message yet</center>
+	  {{/if}}

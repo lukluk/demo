@@ -1,0 +1,98 @@
+
+      <form id="mob-searchpanel" action="listing/search" target="_blank" method="get" >
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="country">     
+              <input type="text" id="country" class="var form-control required typeahead"  placeholder="Country" value="United State" data-val="US">
+            </div>
+          </div>          
+          <div class="col-md-12">
+            <div class="country">     
+              <input type="text" id="keyword" class="var form-control typeahead"  placeholder="Address,country,any property info, any thing" >
+            </div>
+          </div>          
+
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="dropdown ">
+              <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="width:100%">Minprice<span class="caret"></span></button>
+              <ul class="dropdown-menu var" role="menu" aria-labelledby="dLabel" id="minprice">
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="dropdown ">
+              <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="width:100%">Maxprice<span class="caret"></span></button>
+              <ul class="dropdown-menu var" role="menu" aria-labelledby="dLabel" id="maxprice">
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="dropdown ">
+              <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="width:100%">Bedroom<span class="caret"></span></button>
+              <ul class="dropdown-menu var" role="menu" aria-labelledby="dLabel" id="bedroom">
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="width:100%">Type<span class="caret"></span></button>
+              <ul class="dropdown-menu var" role="menu" aria-labelledby="dLabel" id="type">
+                
+              </ul>
+            </div>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col-md-12">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="width:100%">Posting days<span class="caret"></span></button>
+              <ul class="dropdown-menu var" role="menu" aria-labelledby="dLabel" id="added">
+                
+              </ul>
+            </div>          
+          </div>
+          <div class="col-md-12">
+            <div class="dropdown">
+              <button  type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="width:100%">Sort by<span class="caret"></span></button>
+              <ul class="dropdown-menu var" role="menu" aria-labelledby="dLabel" id="sort">
+                
+              </ul>
+            </div>          
+
+          </div>
+        </div>        
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="more newhome">
+              <label class="checkbox" for="newhome">
+                    <input type="checkbox" value="" class="var"  id="newhome" data-toggle="checkbox">
+                      New Homes
+                    </label>
+                  </div>
+            <div class="more locked">
+              <label class="checkbox" for="locked" >
+                    <input type="checkbox" value=""  class="var" id="locked" data-toggle="checkbox">
+                      Under offer or sold STC
+                    </label>
+            </div>
+
+          </div> <!-- end -->
+          </div> 
+          <div class="row">
+            <div class="col-md-8">
+            </div>
+            <div  class="view" renderTo=".footer">
+              <input type="submit" form="mob-searchpanel" class="btn btn-primary" value="Search" style="width:100%"/>
+            </div>
+          </div> 
+
+      </form>  

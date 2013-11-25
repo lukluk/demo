@@ -1,0 +1,81 @@
+
+<div class="row needscroll">
+  <div class="col-md-8 col-sm-8 page">
+    <div class="row">
+      <div class="col-md-12 title">
+
+        <a href="#!/listing/search/keyword_{{address}}">{{address}}</a><br><a href="#!/listing/search/keyword_{{city}}">{{city}}</a> <a href="#!/listing/search/keyword_{{state}}">{{state}}</a> <a href="#!/listing/search/keyword_{{zipcode}}">{{zipcode}}</a><br><a href="#!/listing/search/keyword_{{country}}">{{country}}</a></div>      
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class=""> <img src="{{photo.0.url}}" class="img-responsive" width="100%" height="auto"/>
+            <div class="rightbottom"><a href="#!/listing/photogallery/id_{{id}}" class="minibuttonx"><span class="fa-camera fa-lg fa white"></span>&nbsp;View Photos</a></div>
+          </div>
+      </div>
+        <div class="rightinfo col-md-6 col-sm-6">
+            <div class="row">
+              
+              <div class="col-md-12 price">{{price}}</div>
+            </div>
+
+            <div class="row">
+              <div class="col-all-6">Status</div>
+              <div class="col-all-6">{{status}}</div>
+            </div>
+            <div class="row">
+              <div class="col-all-6">Beds</div>
+              <div class="col-all-6">{{bedroom}}</div>
+            </div>            
+            <div class="row">
+              <div class="col-all-6">Bath</div>
+              <div class="col-all-6">{{bathroom}}</div>
+            </div>            
+            <div class="row">
+              <div class="col-all-6">Year Build</div>
+              <div class="col-all-6">{{yearbuild}}</div>
+            </div>
+
+        </div>
+    </div>
+    <br/>
+    <div class="title">Property info</div>
+    <div class="metainfocontent">
+    </div>
+    <br/>
+    <div class="title">Map</div>
+    <div class="maps">
+      <div id="map" data-lng="{{lng}}" data-lat="{{lat}}" data-type="{{type}}" class="automap"></div>
+    </div>
+
+  </div>
+<div class="col-md-4 col-sm-4 pageright">
+    <div class="row" style="padding:5px;">
+      <div class="col-md-12">
+          <div class="imgbox"><img src="{{company.companylogo}}" width="100%" height="auto"/></div>
+      </div>
+    </div>
+    <div class="row" style="padding:5px;">
+      <div class="companytitle">{{company.companyname}}</div>
+      <br/>
+                <strong>Our Offices</strong>
+                {{#each company.office}}
+                  <div class="office">                      
+                      <div class="address">{{this.address}}</div>
+                      <div class="phone">Phone:{{this.phone}}</div>
+                      <div class="email">Email:<a href="#!/dashboard/email/{{this.id}}">Send Email</a></div>
+                      <div class="website">Website:{{this.website}}</div>
+                  </div>
+                {{/each}}
+
+    </div>
+      <div class="row">
+      <div class="col-md-12">
+
+      </div>
+    </div>
+  </div>  
+</div>
+
+<div class="view" renderTo=".footer">
+          <a href="#!/contact/company/id_{{company.id}}/{{company.name}}" class="flatbutton" style="width:100%">Submit an Enquirie</a>
+</div>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta name="viewport" content="width=device-width">
+	    <link href="style.css" media="all" rel="stylesheet">	     		
+ 		<link href="system/css/style.css" media="all" rel="stylesheet">	     		 		
+ 		<script src="cordova.js"></script>
+	    <script src="system/js/jquery.min.js"></script>	   
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&key=AIzaSyAhyhzLIg77YWYqWyu7JnSBdEneLfNrvwE"></script>	    
+		<script src="system/js/gmaps.js"></script>	   	    
+		<script src="system/core/storage.js"></script>	   	    
+	    <script src="system/core/loader.js"></script>	   
+		<script src="system/core/core.js"></script>	   		
+		<script src="app.js"></script>	   
+
+	</head>
+	<body>
+<div class="myaccount">
+   <a class="buttonx green" href="/cms/#!/dashboard/index">Inbox<span class="badge"></span></a>
+  </div>
+  <div class="logout">
+   <a class="buttonx red" href="/cms/#!/user/logout">Logout</a>
+  </div>				
+
+  <div class="login">
+   <a class="buttonx green" href="/cms/#!/user/login">Login</a>
+  </div>				
+		<div id="leftmenu"></div>		
+		<div id="app">
+			<header class="header">	
+				<div class="menu-button"><a class="iconbig glyphicon glyphicon-align-justify" id="menu"></a></div>	
+				<div class="logo">
+					<a href="/" class="header-logo">Real Estate</a>
+				</div>	
+				<div class="menu">
+					<ul class="flexnav" data-breakpoint="800"> 
+
+						<li>
+							<a href="/">Home</a>
+						</li> 
+						<li>							
+							<a href="#!/map/app">Search by drawing area</a>
+						</li> 
+
+					</ul>	      	
+				</div>
+			</header>
+			<div class="content">
+			</div>
+			<footer class="footer">
+				
+			</footer>		
+		</div>
+		<div id="startup"></div>
+		<div id="debug"></div>
+	</body>
+</html>

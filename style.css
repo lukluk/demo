@@ -1,0 +1,498 @@
+a{
+ color:#000; 
+}
+div.listing{
+    background: white;  border-bottom: 1px solid #c4c4c4;  border-radius: 5px;  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    display: block;
+}
+div.listingitem{
+  background: white;
+
+  border-left: none;
+
+  /* border-radius: 5px; */
+
+  /* -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); */
+
+  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); */
+
+  padding: 5px;
+  /* width: auto; */
+  position: relative;
+  
+  /* float: left; */
+  /* margin: 10px; */
+  display: block;
+}
+div.listingitem:hover{
+
+}
+div.listingaddress{
+    width: auto;
+    /* padding: 2px; */
+    background: none; 
+    color:#ff5e24;
+    padding-top: 5px;
+}
+div.listingaddress:hover{
+color:#ff8357;
+}
+div.listingaddress a{
+	color: #e74c3c;
+	font-size: 16px;
+	text-decoration: underline;
+}
+div.listingaddress a:hover{
+  text-decoration: none;
+}
+div.listingvisit{
+    position: absolute;
+
+
+    left: 4px;
+    bottom: 4px;
+    padding: 3px;
+    color: #2c3e50;
+    background: #2ECC71;
+    float: left;
+    color: #fff;
+}
+.listingimg{
+
+	
+    
+
+    width: 100%;
+    border: none;
+    /* color: #f00; */
+    background-size: 100% 100%;
+    
+
+    height: auto;
+
+}
+div.listingprice{
+    font-family: #27ae60;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+font-family: "PT Sans Narrow",Arial,sans-serif;
+
+    font-size: 20px;    
+    /* background: #F1C40F; */
+    color: #000;
+    /* border-bottom: 2px solid #c0392b; */
+    font-weight: normal;
+    /* font-size: 18px; */        
+    line-height: 23px;
+}
+
+.listingbath {
+/* position: absolute; */
+/* left: 5px; */
+/* top: 30px; */
+padding: 3px;
+color: #2c3e50;
+/* background: #9b59b6; */
+float: left;
+margin-left: 10px;
+}
+.listingbed {
+/* position: absolute; */
+/* left: 5px; */
+/* top: 54px; */
+padding: 3px;
+color: #2c3e50;
+/* quotes: #3498db; */
+float: left;
+margin-left: 10px;
+}
+@media all and (max-width: 767px) {
+  div.listingitem{
+    /* padding: 0px; */
+  }
+  div.listingprice{
+    position: relative;
+  }
+  .listingpage .pageright{
+  border-left: none !important;
+  height: auto !important;
+  min-height: 100px;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+  .infoitem{
+  width:100% !important;
+  padding: 3px !important;
+  float: left;  
+}
+  .listingitem{
+    width: 100% !important;   
+  
+    
+    margin-bottom: 4px !important;
+}
+  .listing{
+    padding-left: 0px !important;
+  }
+}
+
+div.mapitem {
+background: white;
+
+width: 260px;
+position: relative;
+height: 150px;
+float: left;
+
+display: block;
+margin-top: 20px;
+}
+.gm-style-iw{
+  position: absolute !important;
+left: 12px !important;
+top: 9px !important;
+overflow: auto !important;
+width: 260px !important;
+height: 191px !important;
+}
+.infoitem{
+  width:25%;
+  padding: 10px;
+  float: left;  
+}
+div.infotitle{
+font-size: 18px;
+font-weight: bold;
+width: 100%;
+border-bottom: 2px solid #777;
+}
+div.price{
+  font-size: 20px;
+  font-weight: bold;
+  color: #27ae60;
+  }
+div.title a{
+  color: #000;
+  /* font-weight: bold; */
+
+  
+  font-size: 16px;
+}
+div.title a:hover{
+  text-decoration: underline;
+}
+.listingpage .title{
+    border-bottom: 4px solid #f39c12;
+  
+  
+    margin-bottom: 5px;
+}
+.imgbox {
+    max-width: 150px;
+
+}
+.rightinfo{
+    /* border-left: 4px solid #000; */
+
+    margin-right: -5px;
+    /* height: 100%; */
+    padding-left: 5px;
+}
+.minibuttonx{
+  background: #2980b9;
+  color: #fff;
+  padding: 5px;
+}
+.minibuttonx .icon{
+  font-size: 30px;
+  margin-right: 5px;
+}
+.listingpage .pageright{
+  border-left: 1px dotted #777;
+  height: 100%;
+  margin-right: -6px;
+  margin-left: 5px;
+  min-height: 800px;
+}
+#list_address{
+    width: 100%;
+  
+    position: relative;
+}
+.myloc{
+  width: 50px;
+  position: relative;
+  float: left;
+}
+.cicon{
+  
+  font-size: 3em;
+  position: absolute;
+  top: 0px;
+  left: 14px;
+}
+.listx a{
+  color:#000;
+
+}
+.listx li:hover{
+  font-weight: bold !important;
+  }
+  .listx li a:hover{
+    font-weight: bold !important;
+  }
+.linline{
+  float: left;
+  padding: 3px;
+  margin-left: 5px;
+}
+up{
+  vertical-align: super;
+  font-size: 7pt;
+}
+.imgcon{
+    padding: 4px;
+  
+}
+#searchpanel{
+    width: 90%;
+
+    padding: 5%;
+    margin-top: 25px;
+    /* border-radius: 4px; */
+
+}
+#mappage{
+height: 100%;
+}
+.searchpanel{
+  height: 100%;
+}
+.footer .btn{
+  border-radius: 0px !important;
+  height: 50px !important;
+}
+.listingphotos{
+    float: left;
+    background: #e74c3c;
+    padding: 3px;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    color: #fff;
+}
+#mob-searchpanel{
+  padding:10px; 
+}
+
+.tabs .secondary-nav {
+  float:right;
+  margin-left:10px;
+  margin-right:0;
+}
+.guide{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 10000;
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.center{
+  position: absolute;
+  left: 100px;
+  top: 100px;  
+}
+.topcenter{
+  text-align: center;
+  width: 100%;
+  color:#fff;
+  font-weight: bold;
+  /* height: 50px; */
+  /* border-radius: 6px; */
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+}
+#hand{
+  
+  position: absolute;
+}
+.infolistingbath{
+    float: left;
+
+}
+.infolistingbed{
+    float: left;
+
+}
+.infolistingaddress{
+    float: left;
+
+}
+.infolistingprice{
+    float: left;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #faa;
+    font-weight: bold !important;
+}
+.infolistingimg{
+  
+}
+.homecontent{
+  background: url('system/img/bg.jpg');
+  padding-top: 100px;
+  height: 100%;
+}
+section{
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+.section-header-link{
+  color:#000;
+
+}
+.property-big-block {
+white-space: normal;
+display: -moz-inline-box;
+-moz-box-orient: vertical;
+margin: 0px;
+padding: 0px;
+display: inline-block;
+border: 1px solid #cecece;
+width: 233px;
+margin-right: 10px;
+vertical-align: top;
+height: 302px;
+-o-border-radius: 4px;
+border-radius: 4px;
+position: relative;
+text-decoration: none;
+}
+.main-content{
+  margin: 0px auto;
+  width: 1000px;
+}
+.property-big-block-photo img{
+  min-width: 233px;
+  height: 100%;
+}
+.property-big-block-photo{
+  width: 233px;
+height: 160px;
+position: relative;
+text-align: center;
+overflow: hidden;
+}
+.property-big-block-address:hover{
+  color:#ff8357;
+}
+.property-big-block-address{
+  display: block;
+font-size: 18px;
+padding: 0 20px;
+margin-top: 14px;
+line-height: 23px;
+height: 50px;
+overflow: hidden;
+color:#ff5e24;
+}
+
+.property-big-block-info {
+font-size: 14px;
+padding: 0 20px;
+margin-top: 6px;
+white-space: nowrap;
+}
+.property-big-block-price-full {
+position: absolute;
+bottom: 10px;
+left: 20px;
+font-family: "PT Sans Narrow",Arial,sans-serif;
+font-size: 24px;
+}
+#foot{
+    padding-top: 1px;
+
+    margin-top: 0px;
+}
+.index-promo .index-promo-title {
+color: #eb501a;
+}
+
+.index-promo .index-promo-text, .index-promo .index-promo-share {
+display: -moz-inline-box;
+-moz-box-orient: vertical;
+display: inline-block;
+vertical-align: middle;
+}
+.index-promo .index-promo-text {
+line-height: 22px;
+margin-top: 12px;
+font-size: 14px;
+color: #dfdbd4;
+width: 525px;
+border-right: 2px solid #dfdbd4;
+padding-right: 20px;
+}
+.index-promo {
+background-color: #f0ebe4;
+margin: 40px 0;
+padding: 25px 47px;
+}
+.property-big-block-photo-badges{
+  position: absolute;
+  right:0px;
+  bottom: 0px;
+  background: #ff8357;
+  padding:5px;
+}
+.white{
+  color:#fff;
+}
+.agent{
+  clear: both;
+  width: 100%;
+  text-align: right;
+}
+.visited{
+  float: left;
+}
+.menu-button a:hover{
+  text-decoration: none;
+}
+.phoneMenu .fa{
+  margin-top: 20px;
+}
+.myaccount{
+  position: absolute;
+  right: 150px;
+  top:0px;
+  display: none;
+  z-index: 100;
+}
+.login{
+  position: absolute;
+  right:150px;
+  top:0px;
+  display: none;
+  z-index: 100;
+}
+.logout{
+  position: absolute;
+  right: 50px;
+  top:0px;
+  display: none;
+  z-index: 100;
+}
