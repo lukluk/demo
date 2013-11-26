@@ -85,6 +85,7 @@ var listing={
 			listing.search(listing.getRecent()[0]);			
 		},
 		addRecent:function(param){
+			if(_.loadData('searchrecent')!=null)
 			if(_.loadData('searchrecent').length>255){
 				_.deleteData('searchrecent');
 			}
