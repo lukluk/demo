@@ -452,7 +452,7 @@ var _ = {
                         } else {
                                 if(key=='userid')
                                 {
-                                    //_.redirect('user/login');
+                                 //   _.redirect('user/login');
                                 }
                                 return false;
                         }
@@ -460,6 +460,26 @@ var _ = {
                         _.saveData(key, $.base64.encode(val));
                 }
         },
+        sessionSmart: function (key, val) {
+                if(typeof val == 'undefined') {
+                        if(_.loadData(key) != null && _.loadData(key)!='' && _.loadData(key)!=false) {
+                                var value = _.loadData(key);
+                                if(key == 'post') {
+                                        _.deleteData(key);
+                                }
+
+                                return $.base64.decode(value);
+                        } else {
+                                if(key=='userid')
+                                {
+                                    window.location="/cms/#!/user/login"
+                                }
+                                return false;
+                        }
+                } else {
+                        _.saveData(key, $.base64.encode(val));
+                }
+        },        
         getView: function (name, whendone, path) {
                 var xpath = '';                
                 if(typeof path != 'undefined') {

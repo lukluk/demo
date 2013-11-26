@@ -55,6 +55,11 @@ var map = {
                         listing.openResult(source);
                     }else{
                         _.alert('not found any property on this selected area');
+                        $('#alert').show();
+                            $('#alert').on('click',function(){
+                                $.getJSON('api/alert/submit/'+_.sessionSmart('userid'),function(){alert('you will be notify when we have update about this result')});                
+                            });
+                        
 
                     }
                 });                
@@ -219,10 +224,7 @@ var map = {
 
         },
 
-        event: function () {
-            $('#alert').click(function(){
-                $.getJSON('api/alert/submit/'+_.session('userid'));
-            });
+            event: function () {
             $('#myloc').click(function(){
                 map.myposition();
             });
@@ -304,7 +306,7 @@ var map = {
                       }
                     });
                 }          
-                MapToolbar_init();
+                
             }else{
             $('#list_address').unbind('keypress').keypress(function(event){
                 var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -323,7 +325,7 @@ var map = {
              });  
             }
                      
-
+            MapToolbar_init();
             run();
         },
         search: function (param) {  

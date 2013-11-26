@@ -181,12 +181,19 @@ var listing={
 			 	listing.nextContent(param);
 			 	}				 				 	
 		},
+		event:function(){
+            $('#alert').on('click',function(){
+                $.getJSON('api/alert/submit/'+_.sessionSmart('userid'),function(){alert('you will be notify when we have update about this result')});                
+            });
+
+		},
         load:function(run){   
 
         	if($('.itemlist').length>0){
         		
         	}else{				
 				footer.view.renderTo('.footer',{alertMe:true});						
+
 				listing.view.render();					
 				home.jqsearch();
 				$('.country,.maxprice,.minprice,.added,.bedroom,.sort,.type').css('width','100%');
