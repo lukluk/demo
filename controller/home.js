@@ -1,6 +1,6 @@
 var home={			
 	        live:function(){
-	        	if(_.session('userid'))
+	        	if(_.session('userinfo'))
                 _.getJSON('api/inbox/count/'+_.session('userid'),function(data){
                     $('.myaccount .badge').html(data.tot);
                 },false);                

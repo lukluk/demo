@@ -5,7 +5,7 @@ var _ = {
         config: {
                 live: false,
                 api: {
-                        host: 'http://mobile.local/',
+                        host: 'http://fabreasy.com/',
                         livehost: 'http://192.241.189.129/'
                 },
                 defaultController: 'index',
