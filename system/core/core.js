@@ -452,7 +452,7 @@ var _ = {
                         } else {
                                 if(key=='userid')
                                 {
-                                    _.redirect('user/login');
+                                    //_.redirect('user/login');
                                 }
                                 return false;
                         }
